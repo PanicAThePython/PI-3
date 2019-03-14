@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Ballot - Criar Votação</title>
+    <title>Ballot - Votar</title>
     <meta charset="uft-8">
-    <link rel="icon" href="static/imagem/iconvote.png" type="image/png" />
+    <link rel="icon" href="/static/imagem/iconvote.png" type="image/png" />
     <style>
         input[type=text], select {
             width: 100%;
@@ -77,75 +77,16 @@
             font-style: normal;
             color: #708090;
         }
+
+        
     </style>
 </head>
 <body>
     <ul id="menu">  
-        <a href="index.html"><img src= "static/imagem/iconvote.png" style="width:5%; height: 5%; float: left;"></a>
         <li class="intro" ><a class="intro" href="/ver_ranking" target="_blank">Ranking</a></li>                 
-        <li class="intro" ><a class="intro" href="/votar" target="_blank">Votar</a></li>
+        <li class="intro" ><a class="intro" href="/criar_votacao" target="_blank">Criar Votação</a></li>
     </ul>   
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> 
-    <h1>CRIE SUA PRÓPRIA VOTAÇÃO!</h1>
-    <br>
-    <br>
-    <br>
-    <div>
-        <form action="/action_page.php">
-            <label for="titulo">Título da Votação:</label>
-            <input type="text" id="titulo" name="titulo" placeholder="Batata">
-            <br>
-            <br>
-            
-
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" placeholder="fulana@gamil.com">
-            <br>
-            <br>
-           
-            
-            <label for="candum">Candidato 1:</label>
-            <input type="text" id="candum" name="candum" placeholder="Batata frita">
-	    <br>
-            <br>
-            
-
-	    <label for="candum"> Foto Candidato 1:</label>
-	    <input type="file">
-	    <br>
-	    <br>
-	    <br>
-	    
-	    <label for="candum"> Descrição Candidato 1:</label>
-	    <textarea rows="4" cols="50"> Comente aqui algo sobre o candidato </textarea>
-            <br>
-	    <br>
-	    <br>
-
-            <label for="candois">Candidato 2:</label>
-            <input type="text" id="candois" name="candois" placeholder="Batata assada">
-	    <br>
-            <br>
-            
-
-	    <label for="candum"> Foto Candidato 2:</label>
-            <input type="file">
-            <br>
-            <br>
-           
-	    <label for="candum"> Descrição Candidato 2:</label>
-            <textarea rows="4" cols="50"> Comente aqui algo sobre o candidato </textarea>
-            <br>
-            <br>
-            <br>
-
-
-            <input type="submit" value="Criar Votação">
-        </form>
-    </div>
+    
 </body>
 </html>
+
