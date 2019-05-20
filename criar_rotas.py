@@ -18,4 +18,8 @@ def votar():
 def ver_ranking():
     return render_template("ver_ranking.html")
 
+@app.route("/cadastrar")
+def cadastrar():
+    return render_template("cadastrar.html")
+
 app.run()
