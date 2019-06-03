@@ -114,41 +114,25 @@
             <br>
             <br>
            
-            
-            <label for="candum">Candidato 1:</label>
-            <input type="text" id="candum" name="candum" placeholder="Batata frita">
+            {%for i in range(9):%}
+            <label for="candum">Candidato {{i + 1}}:</label>
+            <input type="text" id="candum" name="cand{{i+1}}" placeholder="Batata frita">
 	        <br>
             <br>
             
 
-            <label for="candum"> Foto Candidato 1:</label>
-            <input type="file">
+            <label for="candum"> Foto Candidato {{i + 1}}:</label>
+            <input type="file" name=fotocandidato{{i+1}}>
             <br>
             <br>
             <br>
             
-            <label for="candum"> Descrição Candidato 1:</label>
-            <textarea rows="4" cols="35"> Comente aqui algo sobre o candidato </textarea>
+            <label for="candum"> Descrição Candidato {{i + 1}}:</label>
+            <textarea rows="4" cols="35" name=descricao{{i+1}}> Comente aqui algo sobre o candidato </textarea>
             <br>
             <br>
             <br>
-
-            <label for="candois">Candidato 2:</label>
-            <input type="text" id="candois" name="candois" placeholder="Batata assada">
-            <br>
-            <br>
-                
-
-            <label for="candum"> Foto Candidato 2:</label>
-            <input type="file">
-            <br>
-            <br>
-            
-            <label for="candum"> Descrição Candidato 2:</label>
-            <textarea rows="4" cols="35"> Comente aqui algo sobre o candidato </textarea>
-            <br>
-            <br>
-            <br>
+            {%endfor%}
         </form>
         <form action="">
 	    <label> Estilo de Votação:</label>

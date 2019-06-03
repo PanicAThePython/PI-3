@@ -51,4 +51,4 @@ def logout():
     session.pop("usuario")
     return redirect("/")
 
-app.run()
+app.run(debug=True)
