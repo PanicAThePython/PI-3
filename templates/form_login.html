@@ -1,41 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Ballot - Cadastrar</title>
+    <title>Ballot - Login</title>
     <meta charset="uft-8">
     <link rel="icon" href="/static/imagem/iconvote1.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="static/ballot.css">
     <style>
-        input, select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            }
-
-        input[type=submit] {
-            width: 100%;
-            background-color: #87CEEB;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            }
-
-        input[type=submit]:hover {
-             background-color: #1E90FF;
-            }
-
-        div {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-            }
-            
         #menu {       
             list-style-type: none;
             margin: 0;      
@@ -45,40 +15,6 @@
             background-color: #87CEEB;
             width: 99%;
         }
-       
-        li {
-            color: white;
-            font-size: 20%; 
-            text-align: center;
-        }
-        
-        li a {
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration: none;
-        }
-
-                
-        .intro {
-            display: block;
-            color: white;
-            float: left;
-            font-size: 110%;
-        }
-        
-        *{
-            font-family: 'Courier New'; 
-            text-align: center;          
-        }
-
-        h1{
-            font-size: 190%;
-            font-style: normal;
-            color: #708090;
-        }
-
-        
     </style>
 </head>
 <body>
@@ -89,19 +25,34 @@
         <li class="intro" ><a class="intro" href="/form_criar_votacao" target="_blank">Criar Votação</a></li>
 
     </ul>   
-    <form action="/cadastrar" method="post">
-        <label for="email">E-mail:</label>
-        <input type="text" id="email" name="email">
-        <br>
-        <br>
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha">
-        <br>
-        <br>
-    </form>              
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    <h1>FAÇA SEU LOGIN!</h1>
+    <br>
+    <br>
+    <br>
+    <div>  
+        <form action="/login" method="post">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" placeholder="fulan@gmail.com">
+            <br>
+            <br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+            <br>
+            <br>
+        </form>              
         <br>
         <input type="submit" value="Login">
-    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div><p style="text-align: center; font-size: 85%; ">Copyright 2019. All Rights Reserved. Powered by Ballot.</p></div>
 
     
 </body>

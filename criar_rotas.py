@@ -3,6 +3,7 @@ from classe import *
 
 app = Flask("__name__")
 
+app.config["SECRET_KEY"] = 'admin'
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -40,7 +41,7 @@ def login():
     email = request.form["email"]
     senha = request.form["senha"]
 
-    if email == "bla@gmail.com" and senha == "123":
+    if email == "bla@gmail.com" and senha == "admin":
         session['usuario'] = email
         return redirect("/")
     else:
