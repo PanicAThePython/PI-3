@@ -4,13 +4,19 @@ from classe import *
 app = Flask("__name__")
 
 app.config["SECRET_KEY"] = 'admin'
+
 @app.route("/")
 def home():
     return render_template("index.html")
 
 @app.route("/form_criar_votacao")
 def form_criar_votacao():
-    return render_template("criar_votacao.html")
+    session['ncandidatos'] = 1
+    return render_template("criar_votacao.html", ncandidatos = session['ncandidatos'])
+
+@app.route("/atualizar_form_criar_votacao")
+def atualizar_form_criar_votacao():
+    return render_template("criar_votacao.html", ncandidatos = session['ncandidatos'])
 
 @app.route("/criar_votacao", methods=['post'])
 def criar_votacao():
@@ -43,6 +49,7 @@ def login():
 
     if email == "bla@gmail.com" and senha == "admin":
         session['usuario'] = email
+        
         return redirect("/")
     else:
         return "erro no login, tente novamente"
@@ -51,5 +58,10 @@ def login():
 def logout():
     session.pop("usuario")
     return redirect("/")
+
+@app.route("/soma")
+def soma():
+    session['ncandidatos'] += 1
+    return redirect("/atualizar_form_criar_votacao")
 
 app.run(debug=True)

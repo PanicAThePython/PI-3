@@ -50,8 +50,7 @@
             <input type="text" id="email" name="email" placeholder="fulan@gamil.com">
             <br>
             <br>
-           
-            {%for i in range(9):%}
+            {%for i in range(ncandidatos):%}
             <label for="candum">Candidato {{i + 1}}:</label>
             <input type="text" id="candum" name="cand{{i+1}}" placeholder="Batata frita">
 	        <br>
@@ -70,6 +69,9 @@
             <br>
             <br>
             {%endfor%}
+        </form>
+        <form action="/soma">
+            <input type="submit" value="Adicionar Candidato">
         </form>
         <form action="">
 	    <label> Estilo de Votação:</label>
